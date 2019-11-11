@@ -21,6 +21,6 @@ player2 integer references player(pid),
 check (player1<>player2),
 matchdt date not null,
 winner integer references player(pid),
-score varchar2(30),
+score varchar2(30) not null,
 primary key(mid,tid)
 )

@@ -1,0 +1,17 @@
+'''
+Problem Statement: Create the Player table as per information provided below:
+
+Column Name	Data Type	Constraint	Description
+PId	INTEGER	PRIMARY KEY	Unique player Id is mandatory for every player
+PName	VARCHAR2(20)	NOT NULL	Player Name
+Ranking	INTEGER		Player's ranking
+'''
+
+Solution:
+
+create table player
+(
+pid integer constraint table_pk primary key,
+pname varchar2(20) constraint table_pname not null,
+ranking integer
+);

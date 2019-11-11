@@ -1,0 +1,20 @@
+'''
+Create the Address table as per specification below:
+Column Name	DataType	Constraints	DESCRIPTION
+HouseNo	NUMBER	PRIMARY KEY		Unique address identifier
+Street	VARCHAR2(30)
+city	VARCHAR2(20)	Foreign Key	Existing City present in City table
+zip	NUMBER(6)		Should be >= 0	Zip code of the city
+state	VARCHAR2(5)
+'''
+Solution:
+
+create table address
+(
+houseno number,
+street varchar2(30),
+city varchar2(20) references city(city),
+zip number(6) check (zip>=0),
+state varchar2(5),
+primary key(houseno,street,city)
+)
